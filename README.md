@@ -196,6 +196,7 @@ Tile Object. [Click here for some real life examples](TILE_EXAMPLES.md)
 
   /* icons: Set the icon for a tile
    * You can use any of the material design icons from https://materialdesignicons.com/
+   * as long as they have been published in the [latest npm package](https://github.com/templarian/materialdesign-svg).
    * Use an object or function to map states to icons
    */
   icons: {on: "mdi-volume-high", off: "mdi-volume-off"}, // Object example
@@ -203,6 +204,7 @@ Tile Object. [Click here for some real life examples](TILE_EXAMPLES.md)
 
   /* icon: Set a static icon for a tile
    * You can use any of the material design icons from https://materialdesignicons.com/
+   * as long as they have been published in the [latest npm package](https://github.com/templarian/materialdesign-svg).
    */
   icon: 'mdi-phone'
 
