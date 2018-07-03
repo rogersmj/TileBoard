@@ -47,6 +47,7 @@ var TYPES = {
    WEATHER: 'weather',
    CLIMATE: 'climate',
    MEDIA_PLAYER: 'media_player',
+   AUTOMATION: 'automation',
    CUSTOM: 'custom'
 };
 

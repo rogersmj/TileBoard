@@ -43,6 +43,8 @@ function MainController ($scope) {
          case TYPES.DOOR_ENTRY: return $scope.openDoorEntry(item, entity);
 
          case TYPES.CUSTOM: return $scope.customTileAction(item, entity);
+
+         case TYPES.AUTOMATION: return $scope.triggerAutomation(item, entity);
       }
    };
 
@@ -714,6 +716,17 @@ function MainController ($scope) {
          }
       });
    };
+
+   $scope.triggerAutomation = function (item, entity) {
+     sendItemData(item, {
+       type: "call_service",
+       domain: "automation",
+       service: "trigger",
+       service_data: {
+         entity_id: entity
+       }
+     });
+   }
 
    $scope.customTileAction = function (item, entity) {
       if(item.action && typeof item.action === "function") {
