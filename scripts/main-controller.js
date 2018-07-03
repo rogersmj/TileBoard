@@ -227,8 +227,8 @@ function MainController ($scope) {
             top: pos[1] * tileSize + (tileMargin * pos[1]) + 'px',
          };
 
-         if(item.styles && typeof item.styles === 'object') {
-            styles = angular.merge(styles, item.styles);
+         if(item.customStyles && typeof item.customStyles === 'object') {
+            styles = angular.merge(styles, item.customStyles);
          }
 
          item.styles = styles;
@@ -679,7 +679,7 @@ function MainController ($scope) {
       var domain = "homeassistant";
       var group = item.id.split('.')[0];
 
-      if(['switch', 'light', 'fan'].includes(group)) domain = group;
+      if(['switch', 'light', 'fan'].indexOf(group)>=0) domain = group;
 
       var service = "toggle";
 
