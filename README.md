@@ -7,6 +7,7 @@ Should you have any ideas or questions please post them on home-assistant forum 
 
 * https://community.home-assistant.io/t/new-dashboard-for-ha/57173
 * https://youtu.be/L8JwzWNAPr8
+* https://t.me/joinchat/CFM1kQ1ZSNL0T9RB9VwK5w
 
 
 ## Screenshots
@@ -54,18 +55,18 @@ var CONFIG = {
        */
       wsUrl: 'ws://localhost:8123/api/websocket',
 
-      /* passwordType: 
+      /* passwordType:
        * MANUAL - allows you to put the password directly to the config file, as it's shown below
        * PROMPT - will ask your password every time you open TileBoard in the browser.
        * PROMPT_SAVING - same as PROMPT but with saving the password after first connection
        * Note: if you used PROMPT_SAVING and changed your password, you will be needed to clear your localStorage
        */
-      passwordType: PASSWORD_TYPES.MANUAL, 
-      
+      passwordType: PASSWORD_TYPES.MANUAL,
+
       /* password: Your HomeAssistant api_password
        * NOTE: If TileBoard is accessible to the outside world, people can
        * read this file and retrieve your password. TileBoard should be placed behind
-       * another form of authentication if it is publically accessible. 
+       * another form of authentication if it is publically accessible.
        * Necessary only with MANUAL password type
        */
       password: null,
@@ -75,7 +76,7 @@ var CONFIG = {
 
       /* timeFormat: 12 for AM/PM marker, 24 for 24 hour time (default) */
       timeFormat: Number,
-      
+
       /* pages: A list of page objects. See documentation on Pages below */
       pages: [],
 
@@ -196,6 +197,7 @@ Tile Object. [Click here for some real life examples](TILE_EXAMPLES.md)
 
   /* icons: Set the icon for a tile
    * You can use any of the material design icons from https://materialdesignicons.com/
+   * as long as they have been published in the [latest npm package](https://github.com/templarian/materialdesign-svg).
    * Use an object or function to map states to icons
    */
   icons: {on: "mdi-volume-high", off: "mdi-volume-off"}, // Object example
@@ -203,6 +205,7 @@ Tile Object. [Click here for some real life examples](TILE_EXAMPLES.md)
 
   /* icon: Set a static icon for a tile
    * You can use any of the material design icons from https://materialdesignicons.com/
+   * as long as they have been published in the [latest npm package](https://github.com/templarian/materialdesign-svg).
    */
   icon: 'mdi-phone'
 

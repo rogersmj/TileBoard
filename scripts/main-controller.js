@@ -31,6 +31,8 @@ function MainController ($scope) {
 
          case TYPES.LOCK: return $scope.toggleLock(item, entity);
 
+         case TYPES.AUTOMATION: return $scope.triggerAutomation(item, entity);
+
          case TYPES.SCRIPT: return $scope.callScript(item, entity);
 
          case TYPES.INPUT_SELECT: return $scope.toggleSelect(item, entity);
@@ -718,15 +720,15 @@ function MainController ($scope) {
    };
 
    $scope.triggerAutomation = function (item, entity) {
-     sendItemData(item, {
-       type: "call_service",
-       domain: "automation",
-       service: "trigger",
-       service_data: {
-         entity_id: entity
-       }
-     });
-   }
+      sendItemData(item, {
+         type: "call_service",
+         domain: "automation",
+         service: "trigger",
+         service_data: {
+            entity_id: item.id
+         }
+      });
+   };
 
    $scope.customTileAction = function (item, entity) {
       if(item.action && typeof item.action === "function") {
